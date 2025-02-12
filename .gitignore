@@ -9,3 +9,22 @@ venv/
 # Node.js
 node_modules/
 .npm/
+
+# Byggfiler och dist
+build/
+dist/
+*.tgz
+
+# Loggfiler
+*.log
+
+# Systemfiler
+.DS_Store
+Thumbs.db
+
+# Miljöspecifika filer
+.env.local
+
+# Test och coverage
+.coverage
+*.coveragerc
