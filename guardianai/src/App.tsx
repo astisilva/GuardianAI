@@ -11,10 +11,14 @@ function App() {
       setResult('Skriv något att analysera.');
       return;
     }
+    if (text.trim().length < 3) {
+      setResult('Texten måste innehålla minst 3 tecken.');
+      return;
+    }
 
     try {
-      const response = await axios.post('http://localhost:5000/analyze', { text });
-      setResult(response.data.analysis);
+      const response = await axios.post('http://127.0.0.1:8000/analyze/', { text });
+      setResult(`${response.data.label} (Confidence: ${response.data.score.toFixed(2)})`);
     } catch (error) {
       console.error('Error analyzing text', error);
       setResult('Något gick fel');
