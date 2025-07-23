@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #d0d4ff;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 32px; /* Mer luft mellan elementen */
+  padding: 30px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #8a9bff;
   text-align: center;
+  text-shadow:
+    0 0 6px #6b72ff66,
+    0 0 12px #9a9cff33;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 20px;
+  font-size: 1.1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 14px;
+  border: 1.5px solid #7a7fff88;
+  background: rgba(122, 127, 255, 0.15);
+  color: #d0d4ff;
+  box-shadow: 0 0 10px #7a7fff44;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  resize: vertical;
+
+  text-shadow:
+    0 0 2px #7a7fffaa;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+textarea::placeholder {
+  color: #8a9bff99;
+  text-shadow: none;
+  font-style: italic;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #9a9cffcc;
+  box-shadow: 0 0 20px #7a7fffaa;
+  background: rgba(122, 127, 255, 0.25);
+}
+
+button {
+  border-radius: 14px;
+  border: 1.5px solid #7a7fffcc;
+  padding: 0.9em 2em;
+  font-size: 1.15em;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(122, 127, 255, 0.22);
+  color: #d0d4ff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 14px #7a7fff77;
+  transition: all 0.35s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: rgba(122, 127, 255, 0.42);
+  box-shadow: 0 0 26px #7a7fffcc, 0 0 40px #7a7fff88;
+  border-color: #9a9cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto #7a7fffcc;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b8bfff;
+  text-shadow: 0 0 6px #7a7fff66;
+  margin-top: 12px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Anpassning för små skärmar */
+@media (max-width: 600px) {
+  div {
+    padding: 20px;
+    gap: 24px;
   }
-  to {
-    transform: rotate(360deg);
+  textarea {
+    font-size: 1em;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  button {
+    font-size: 1em;
+    padding: 0.8em 1.6em;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
