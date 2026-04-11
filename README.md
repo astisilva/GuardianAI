@@ -26,6 +26,6 @@ Projektet använder **React** för frontend och **Python (FastAPI)** för backen
 
 ---
 
-## 👥 Bidrag & Kontakt
+## 👥 Om projektet
 
-Om du vill bidra, kontakta mig via [LinkedIn](https://linkedin.com/in/dittnamn) eller skapa en issue i GitHub-repot! 🚀
+GuardianAI är ett personligt projekt som jag byggde för att lära mig fullstack-utveckling med React och Python.
